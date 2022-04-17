@@ -4,8 +4,6 @@ from decouple import config
 
 app = Client('my_account')
 
-LOVE_ID = int(config('LOVE_ID'))
-
 compliments = [
     'Боже, какая же ты красивая',
     'Ты с каждым видео все лучше и лучше',
@@ -20,7 +18,8 @@ def react_to_video_message(_, message):
     # print(f'Here is name of person {message.from_user.first_name}')
     # print(f'Here is username of person {message.from_user.username}')
     #
-    is_lovely_person = message.from_user.id == LOVE_ID
+    # Replace 00000 to correct message.from_user.id
+    is_lovely_person = message.from_user.id == 00000
     is_video_message = getattr(message, 'video_note')
     #
     if is_lovely_person and is_video_message:
