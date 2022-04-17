@@ -2,7 +2,11 @@ from pyrogram import Client, filters
 from random import choice
 from decouple import config
 
-app = Client('my_account')
+APP_ID = config('APP_ID')
+APP_HASH = config('APP_HASH')
+LOVE_ID = config('LOVE_ID', cast=int)
+
+app = Client('my_account', api_id=APP_ID, api_hash=APP_HASH)
 
 compliments = [
     'Боже, какая же ты красивая',
@@ -18,8 +22,7 @@ def react_to_video_message(_, message):
     # print(f'Here is name of person {message.from_user.first_name}')
     # print(f'Here is username of person {message.from_user.username}')
     #
-    # Replace 00000 to correct message.from_user.id
-    is_lovely_person = message.from_user.id == 00000
+    is_lovely_person = message.from_user.id == LOVE_ID
     is_video_message = getattr(message, 'video_note')
     #
     if is_lovely_person and is_video_message:
