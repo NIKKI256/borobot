@@ -1,13 +1,12 @@
 import asyncio
-from pyrogram import Client, filters
-from random import choice, random, randrange
+from pyrogram import Client
+from random import choice, randrange, getrandbits
 from decouple import config
 
 APP_ID = config('APP_ID')
 APP_HASH = config('APP_HASH')
 
 app = Client('my_account', api_id=APP_ID, api_hash=APP_HASH)
-
 
 reactions = [
     'Поддерживаю',
@@ -21,20 +20,18 @@ reactions = [
     'Несомненно',
     'Я того же мнения',
     'Это именно то, что я собирался сказать',
-    'Я полностью "за"'
+    'Я полностью "за"',
+    'даже и не поспоришь!',
+    'Братан УРААА!!!!'
 ]
 
 @app.on_message()
-async def react_to_video_message(_, message):
-    print(message)
-    # Tolik
-    is_tolik = message.from_user.id == 596655936
+async def react_to_message(_, message):
+    is_tolik = message.from_user and message.from_user.id == 596655936
     #
-    if is_tolik and bool(random.getrandbits(1)):
-        await asyncio.sleep(randrange(5))
+    if is_tolik and bool(getrandbits(1)):
+        await asyncio.sleep(randrange(3,5))
         reaction = choice(reactions)
-        message.reply(reaction)
+        await message.reply(reaction)
 
-task = asyncio.create_task(app.run())
-event_loop = asyncio.get_event_loop()
-event_loop.run_until_complete()
+asyncio.wait(app.run())
