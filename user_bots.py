@@ -8,7 +8,7 @@ APP_ID = config('APP_ID')
 APP_HASH = config('APP_HASH')
 
 LOVE_ID = config('LOVE_ID', cast=int)
-TOLIK_ID = config('TOLIK', cast=int)
+TOLIK_ID = config('TOLIK_ID', cast=int)
 
 app = Client('my_account', api_id=APP_ID, api_hash=APP_HASH)
 
