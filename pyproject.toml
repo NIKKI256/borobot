@@ -8,6 +8,9 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.8"
+Pyrogram = "^1.4.16"
+asyncio = "^3.4.3"
+decouple = "^0.0.7"
 
 
 [build-system]
