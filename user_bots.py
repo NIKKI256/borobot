@@ -46,9 +46,7 @@ async def react_to_message(_, message):
     message: dict you get from users in telegram
     """
     #
-    print(message)
     is_react_to_message = bool(randrange(5) == 3)
-    # is_long_message = 
     #
     if is_react_to_message:
         await asyncio.sleep(randrange(3,5))
