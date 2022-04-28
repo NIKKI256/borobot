@@ -2,7 +2,7 @@ from pyrogram import Client, filters
 from decouple import config
 from consts import compliments, agree_reactions
 from random import choice, randrange
-import asyncio
+from time import sleep
 
 APP_ID = config('APP_ID')
 APP_HASH = config('APP_HASH')
@@ -22,7 +22,7 @@ app = Client('my_account', api_id=APP_ID, api_hash=APP_HASH)
     # pass
 
 @app.on_message(filters.user(users=LOVE_ID))
-async def react_to_video_message_of_love(_, message):
+def react_to_video_message_of_love(_, message):
     """
     react_to_video_message_of_love: 
     this function react to video messages of your love
@@ -34,11 +34,11 @@ async def react_to_video_message_of_love(_, message):
     #
     if is_video_message:
         compliment_message = choice(compliments)
-        await message.reply(compliment_message)
+        message.reply(compliment_message)
 
 
 @app.on_message(filters.user(users=TOLIK_ID))
-async def react_to_message(_, message):
+def react_to_message(_, message):
     """
     react_to_video_message_of_love: 
     this function randomly react to messages of analytics 
@@ -49,8 +49,8 @@ async def react_to_message(_, message):
     is_react_to_message = bool(randrange(5) == 3)
     #
     if is_react_to_message:
-        await asyncio.sleep(randrange(3,5))
+        sleep(randrange(3,5))
         reaction = choice(agree_reactions)
-        await message.reply(reaction)
+        message.reply(reaction)
 
 app.run()
