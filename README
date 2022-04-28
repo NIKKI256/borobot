@@ -1,2 +1,8 @@
-coming soon :)
-Have to add docker
+1. Build image 
+docker build -t borobot .
+
+2. Run container
+docker run -d --rm --name borobot borobot
+
+3. Stop container
+docker stop borobot
