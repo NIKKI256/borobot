@@ -15,11 +15,15 @@ docker build -t borobot .
 ```
 
 2. Run container
+``` shell
 docker run -d --rm --name borobot borobot
+```
+
 
 3. Stop container
+``` shell
 docker stop borobot
+```
 
-In first start you need confirm your account in telegram.
-If you don`t trust me, follow this link 
-https://docs.pyrogram.org/start/auth
+>In first start you need confirm your account in telegram.
+>If you don`t trust me, [follow this link](https://docs.pyrogram.org/start/auth)
