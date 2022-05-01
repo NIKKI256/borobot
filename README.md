@@ -7,22 +7,16 @@ Then go to API development tools
 copy your api_id and api hash
 create .env file and paste it there
 
-## Instalation 
+## Start 
 
-1. Build image 
-``` shell
-docker build -t borobot .
+Just run
+```shell
+dokcer-compose up
 ```
 
-2. Run container
-``` shell
-docker run -d --rm --name borobot borobot
-```
-
-
-3. Stop container
-``` shell
-docker stop borobot
+And this command for kill container
+```shell
+dokcer-compose down
 ```
 
 ## Details
