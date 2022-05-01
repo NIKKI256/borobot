@@ -1,5 +1,7 @@
-1. You need to get your APP_ID and APP_HASH. Log in with this link
-https://my.telegram.org/
+# Configuration
+
+Before start get your APP_ID and APP_HASH. 
+[Log in with this link](https://my.telegram.org/)
 
 Then go to API development tools 
 copy your api_id and api hash
