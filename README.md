@@ -27,7 +27,7 @@ docker stop borobot
 
 ## Details
 
-*If you don`t see your APP_ID and APP_HASH you have to create your application in the website
+* If you don`t see your APP_ID and APP_HASH you have to create your application in the website
 
-*In first start you have to confirm your account in telegram.
+* In first start you have to confirm your account in telegram.
 If you don`t trust me, [follow this link](https://docs.pyrogram.org/start/auth)
