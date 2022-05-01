@@ -10,6 +10,7 @@ readme = "README.md"
 python = "^3.8"
 Pyrogram = "^1.4.16"
 python-decouple = "^3.6"
+TgCrypto = "^1.2.3"
 
 
 [build-system]
