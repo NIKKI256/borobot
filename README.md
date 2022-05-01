@@ -1,6 +1,6 @@
 # Configuration
 
-Before start get your APP_ID and APP_HASH. 
+Before start get your APP_ID and APP_HASH.
 [Log in with this link](https://my.telegram.org/)
 
 Then go to API development tools 
@@ -25,5 +25,9 @@ docker run -d --rm --name borobot borobot
 docker stop borobot
 ```
 
->In first start you need confirm your account in telegram.
->If you don`t trust me, [follow this link](https://docs.pyrogram.org/start/auth)
+## Details
+
+*If you don`t see your APP_ID and APP_HASH you have to create your application in the website
+
+*In first start you have to confirm your account in telegram.
+If you don`t trust me, [follow this link](https://docs.pyrogram.org/start/auth)
