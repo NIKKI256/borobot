@@ -27,6 +27,8 @@ docker stop borobot
 
 ## Details
 
+* File user_bots.py has example function which help you find out Id of your person for .env file 
+
 * If you don`t see your APP_ID and APP_HASH you have to create your application in the website
 
 * In first start you have to confirm your account in telegram.
