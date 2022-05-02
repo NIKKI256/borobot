@@ -11,12 +11,12 @@ create .env file and paste it there
 
 Just run
 ```shell
-dokcer-compose up
+docker-compose up
 ```
 
 And this command for kill container
 ```shell
-dokcer-compose down
+docker-compose down
 ```
 
 ## Details
