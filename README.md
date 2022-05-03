@@ -1,3 +1,7 @@
+# Requirements
+* docker-compose
+* make
+
 # Configuration
 
 Before start get your APP_ID and APP_HASH.
@@ -9,14 +13,19 @@ create .env file and paste it there
 
 ## Start 
 
-Just run
+Authorization is required when the bot is launched for the first time
 ```shell
-docker-compose up
+make first-run
 ```
 
-And this command for kill container
+After that you can run it with command
 ```shell
-docker-compose down
+make up
+```
+
+For stop
+```shell
+make down
 ```
 
 ## Details

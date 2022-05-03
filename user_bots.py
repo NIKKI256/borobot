@@ -10,7 +10,7 @@ APP_HASH = config('APP_HASH')
 LOVE_ID = config('LOVE_ID', cast=int)
 TOLIK_ID = config('TOLIK_ID', cast=int)
 
-app = Client('my_account', api_id=APP_ID, api_hash=APP_HASH)
+app = Client('borobot', api_id=APP_ID, api_hash=APP_HASH, workdir='./session')
 
 # @app.on_message()
 # def check_info_about_message(_, message):

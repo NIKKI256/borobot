@@ -4,3 +4,7 @@ services:
   borobot:
     build: .
     image: bot_borobot
+    env_file:
+      - .env
+    volumes:
+      - ./session:/app/session
